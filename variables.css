@@ -1,0 +1,49 @@
+:root {
+    /* Colors - Premium Volleyball Theme (Blues, Oranges, Sleek Darks) */
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --secondary: #f59e0b;
+    --accent: #ec4899;
+    
+    --bg-main: #0f172a;
+    --bg-card: #1e293b;
+    --bg-input: #334155;
+    
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --text-inverse: #ffffff;
+    
+    --border: #334155;
+    
+    /* Spacing */
+    --gap-xs: 0.5rem;
+    --gap-sm: 1rem;
+    --gap-md: 1.5rem;
+    --gap-lg: 2rem;
+    --gap-xl: 3rem;
+    
+    /* Typography - Modern Clamp */
+    --font-size-base: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+    --font-size-h1: clamp(2rem, 1.5rem + 2vw, 4rem);
+    --font-size-h2: clamp(1.5rem, 1.2rem + 1.5vw, 3rem);
+    --font-size-h3: clamp(1.25rem, 1.1rem + 1vw, 2rem);
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-base: 0.3s ease;
+}
+
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+    font-size: var(--font-size-base);
+}

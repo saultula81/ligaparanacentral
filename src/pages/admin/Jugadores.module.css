@@ -1,0 +1,112 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-lg);
+}
+
+.admin_header_actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: var(--gap-sm);
+}
+
+.bulk_upload {
+    display: flex;
+    align-items: center;
+}
+
+.section_title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: var(--gap-md);
+    border-left: 4px solid var(--primary);
+    padding-left: 15px;
+}
+
+.section_title h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.register_section {
+    background-color: var(--bg-card);
+    padding: var(--gap-lg);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.register_form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--gap-md);
+    align-items: flex-end;
+}
+
+.search_bar__input {
+    background-color: var(--bg-input);
+    border: 1px solid var(--border);
+    color: var(--text-main);
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.player_list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+}
+
+.player_card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: var(--gap-md);
+    border-radius: 12px;
+    display: flex;
+    gap: var(--gap-lg);
+    align-items: center;
+    transition: var(--transition-base);
+}
+
+.player_card:hover {
+    border-color: var(--primary);
+    transform: translateX(5px);
+}
+
+.player_info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.player_info p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.player_teams {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.team_tag {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    background-color: var(--bg-input);
+    border-radius: 20px;
+    color: var(--text-muted);
+}
+
+.team_tag--active {
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+@media (max-width: 600px) {
+    .register_form {
+        grid-template-columns: 1fr;
+    }
+}

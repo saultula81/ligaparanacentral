@@ -1,0 +1,34 @@
+[
+    {
+        "nombre": "Mateo Ibarra",
+        "dni": "40123456"
+    },
+    {
+        "nombre": "Joaquín Ferreyra",
+        "dni": "42123001"
+    },
+    {
+        "nombre": "Kevin Duarte",
+        "dni": "41456002"
+    },
+    {
+        "nombre": "Nahuel Flores",
+        "dni": "40987003"
+    },
+    {
+        "nombre": "Lisandro Borba",
+        "dni": "39654004"
+    },
+    {
+        "nombre": "Alejo Zapata",
+        "dni": "42741005"
+    },
+    {
+        "nombre": "Ramiro Cuestas",
+        "dni": "41258006"
+    },
+    {
+        "nombre": "Uriel Lescano",
+        "dni": "40369007"
+    }
+]

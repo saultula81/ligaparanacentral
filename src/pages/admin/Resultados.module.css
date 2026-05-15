@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-lg);
+}
+
+.match_list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+}
+
+.match_item {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: var(--gap-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--transition-base);
+}
+
+.match_item:hover {
+    border-color: var(--primary);
+}
+
+.match_teams {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-md);
+    font-weight: 700;
+}

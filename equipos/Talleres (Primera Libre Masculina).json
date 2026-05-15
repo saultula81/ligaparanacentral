@@ -1,0 +1,42 @@
+[
+  {
+    "nombre": "Mateo Ibarra",
+    "dni": "40123456"
+  },
+  {
+    "nombre": "Franco Battisti",
+    "dni": "39456789"
+  },
+  {
+    "nombre": "Ignacio Ramírez",
+    "dni": "41987654"
+  },
+  {
+    "nombre": "Facundo Ortiz",
+    "dni": "40654321"
+  },
+  {
+    "nombre": "Lucas Pereyra",
+    "dni": "38741258"
+  },
+  {
+    "nombre": "Tomás Velázquez",
+    "dni": "41258963"
+  },
+  {
+    "nombre": "Bautista Schmidt",
+    "dni": "40369147"
+  },
+  {
+    "nombre": "Enzo Galli",
+    "dni": "39147852"
+  },
+  {
+    "nombre": "Marcos Toledo",
+    "dni": "41951753"
+  },
+  {
+    "nombre": "Santiago Vera",
+    "dni": "40159357"
+  }
+]
