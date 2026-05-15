@@ -2,11 +2,7 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { supabase } from '../../lib/supabase';
 import styles from './Admin.module.css';
-<<<<<<< HEAD
 import { Trophy, Calendar, ArrowRight, Activity, Shield } from 'lucide-react';
-=======
-import { Users, Trophy, Calendar, ArrowRight, Activity, Shield } from 'lucide-react';
->>>>>>> 30bb02147ea73dbeeb14506130ce444d5228ef46
 
 export default function Dashboard() {
   const navigate = useNavigate();
@@ -30,29 +26,14 @@ export default function Dashboard() {
       stat: `${stats.equipos} Equipos`
     },
     {
-<<<<<<< HEAD
       title: "2. Generar Fixture",
-=======
-      title: "2. Jugadores",
-      desc: "Carga masiva de jugadores y asignación a equipos.",
-      icon: <Users size={32} color="#10b981" />,
-      path: "/admin/jugadores",
-      stat: "Gestión Atletas"
-    },
-    {
-      title: "3. Generar Fixture",
->>>>>>> 30bb02147ea73dbeeb14506130ce444d5228ef46
       desc: "Crea el calendario con detección de conflictos.",
       icon: <Calendar size={32} color="#f59e0b" />,
       path: "/admin/fixture",
       stat: "Calendario"
     },
     {
-<<<<<<< HEAD
       title: "3. Cargar Resultados",
-=======
-      title: "4. Cargar Resultados",
->>>>>>> 30bb02147ea73dbeeb14506130ce444d5228ef46
       desc: "Publica marcadores y crónicas al Diario Digital.",
       icon: <Trophy size={32} color="#ef4444" />,
       path: "/admin/resultados",
