@@ -618,6 +618,18 @@
     box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
 }
 
+.print_header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.print_logo {
+    width: 60px;
+    height: auto;
+    display: block;
+}
+
 .print_btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
@@ -625,9 +637,34 @@
 
 /* ESTILOS PARA IMPRESION (BLANCO Y NEGRO LEGIBLE) */
 @media print {
-    /* Ocultar barra lateral y botones */
-    .sidebar, .print_btn, .content__header {
+    /* Ocultar barra lateral y botones, PERO NO LA CABECERA COMPLETA */
+    .sidebar, .print_btn {
         display: none !important;
+    }
+
+    .content__header {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        margin-bottom: 30px !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+    .print_header {
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    .print_logo {
+        width: 120px !important; /* Más grande en el papel */
+    }
+
+    .content__header h2 {
+        color: black !important;
+        font-size: 1.8rem !important;
+        margin: 0 !important;
     }
 
     /* Ajustar el contenedor principal */

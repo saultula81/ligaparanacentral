@@ -235,7 +235,10 @@ export default function Diario() {
         ) : activeTab === 'calendario' ? (
           <div className={styles.calendario_container}>
              <header className={styles.content__header}>
-                 <h2>Fixture Oficial de la Liga</h2>
+                 <div className={styles.print_header}>
+                   <img src="/liga.png" alt="Logo Liga" className={styles.print_logo} />
+                   <h2>Fixture Oficial de la Liga</h2>
+                 </div>
                  <button onClick={() => window.print()} className={styles.print_btn}>
                    🖨️ Imprimir Fixture
                  </button>
