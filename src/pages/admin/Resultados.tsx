@@ -42,7 +42,7 @@ export default function Resultados() {
 
         const fileExt = file.name.split('.').pop();
         const fileName = `${Math.random()}.${fileExt}`;
-        const filePath = `partidos/${fileName}`;
+        const filePath = `logos/${fileName}`;
 
         const { error: uploadError } = await supabase.storage
             .from('voley-images')
