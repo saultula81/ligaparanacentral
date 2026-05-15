@@ -20,7 +20,6 @@ export default defineConfig({
         theme_color: '#0f172a',
         start_url: '/diario',
         display: 'standalone',
-<<<<<<< HEAD
         shortcuts: [
           {
             name: 'Ver Diario y Noticias',
@@ -33,8 +32,6 @@ export default defineConfig({
             icons: [{ src: 'pwa-192x192.png', sizes: '192x192' }]
           }
         ],
-=======
->>>>>>> 30bb02147ea73dbeeb14506130ce444d5228ef46
         icons: [
           {
             src: 'pwa-192x192.png',
