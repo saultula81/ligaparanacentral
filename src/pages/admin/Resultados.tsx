@@ -56,8 +56,9 @@ export default function Resultados() {
 
         setFotoUrl(data.publicUrl);
         alert("Foto cargada ✓");
-    } catch (error) {
-        alert("Error al subir imagen");
+    } catch (error: any) {
+        console.error("Detalle del error de Supabase:", error);
+        alert(`Error al subir imagen: ${error.message || 'El servidor rechazó el archivo. Verifica el formato o el peso.'}`);
     } finally {
         setUploading(false);
     }

@@ -33,6 +33,8 @@ export default function AdminLayout() {
       deferredPrompt.prompt();
       const { outcome } = await deferredPrompt.userChoice;
       if (outcome === 'accepted') setDeferredPrompt(null);
+    } else {
+      alert("Para instalar esta aplicación, haz clic en el ícono de 'Instalar' (🖵) que aparece en la barra de direcciones de tu navegador, arriba a la derecha.");
     }
   };
 
@@ -42,6 +44,9 @@ export default function AdminLayout() {
   };
 
   const isActive = (path: string) => location.pathname === path ? styles['admin__link--active'] : '';
+
+  // Determinar si ya está instalada (modo standalone)
+  const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
 
   return (
     <div className={styles.admin}>
@@ -76,10 +81,18 @@ export default function AdminLayout() {
 
       <main className={styles.admin__content}>
         <header style={{display: 'flex', justifyContent: 'flex-end', padding: '20px', position: 'sticky', top: 0, zIndex: 100}}>
-          {deferredPrompt && (
-            <button onClick={handleInstall} className={styles.install_admin_btn}>
+          {!isStandalone && (
+            <button 
+              onClick={handleInstall} 
+              style={{
+                display: 'flex', alignItems: 'center', gap: '8px', 
+                background: 'var(--primary)', color: 'white', 
+                border: 'none', padding: '10px 20px', 
+                borderRadius: '8px', cursor: 'pointer',
+                fontWeight: 700, boxShadow: '0 4px 15px rgba(37, 99, 235, 0.4)'
+              }}>
               <Download size={18} />
-              <span>Instalar Panel Admin</span>
+              <span>Descargar e Instalar Panel</span>
             </button>
           )}
         </header>

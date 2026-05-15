@@ -601,3 +601,89 @@
         text-align: left;
     }
 }
+
+/* BOTON DE IMPRESION */
+.print_btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+}
+
+.print_btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+}
+
+/* ESTILOS PARA IMPRESION (BLANCO Y NEGRO LEGIBLE) */
+@media print {
+    /* Ocultar barra lateral y botones */
+    .sidebar, .print_btn, .content__header {
+        display: none !important;
+    }
+
+    /* Ajustar el contenedor principal */
+    .diario_container {
+        background: white !important;
+        color: black !important;
+        display: block;
+    }
+
+    .content {
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+    }
+
+    /* Transformar las tarjetas para que se impriman bien en papel */
+    .fixture_full_card {
+        background: white !important;
+        border: 2px solid #000 !important;
+        box-shadow: none !important;
+        color: black !important;
+        page-break-inside: avoid; /* Evita que la tarjeta se corte por la mitad en 2 paginas */
+        margin-bottom: 20px;
+    }
+
+    .fixture_header {
+        border-bottom: 1px solid #000 !important;
+    }
+
+    .fixture_cat {
+        background: transparent !important;
+        border: 1px solid #000;
+        color: black !important;
+    }
+
+    .fixture_time {
+        color: black !important;
+    }
+
+    .fixture_team span {
+        color: black !important;
+    }
+
+    .fixture_vs {
+        color: black !important;
+    }
+
+    .fixture_footer {
+        background: transparent !important;
+        color: black !important;
+        border-top: 1px dashed #000;
+    }
+
+    /* Asegurar que las imagenes/escudos se impriman bien */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+}

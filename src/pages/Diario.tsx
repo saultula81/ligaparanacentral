@@ -236,6 +236,9 @@ export default function Diario() {
           <div className={styles.calendario_container}>
              <header className={styles.content__header}>
                  <h2>Fixture Oficial de la Liga</h2>
+                 <button onClick={() => window.print()} className={styles.print_btn}>
+                   🖨️ Imprimir Fixture
+                 </button>
              </header>
              <div className={styles.fixture_full_grid}>
                 {allUpcomingMatches.length === 0 ? (
