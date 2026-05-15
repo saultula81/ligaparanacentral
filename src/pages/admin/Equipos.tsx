@@ -1,11 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../../lib/supabase";
 import styles from "./Admin.module.css";
-<<<<<<< HEAD
 import { Edit2, Trash2, Users, Upload, FileJson, FileText, X, PlusCircle, UserMinus } from "lucide-react";
-=======
-import { Edit2, Trash2, Users, Upload, FileJson, X, PlusCircle, UserMinus } from "lucide-react";
->>>>>>> 30bb02147ea73dbeeb14506130ce444d5228ef46
 
 export default function Equipos() {
   const [equipos, setEquipos] = useState<any[]>([]);
@@ -107,7 +103,6 @@ export default function Equipos() {
             }
             openPlayerManager(managingTeam);
         } catch (err) { alert("Error en JSON"); }
-<<<<<<< HEAD
         e.target.value = '';
     };
     reader.readAsText(file);
@@ -144,8 +139,6 @@ export default function Equipos() {
             alert(`Se procesaron y vincularon ${successCount} jugadores correctamente desde el archivo de texto.`);
         } catch (err) { alert("Error al procesar el archivo de texto"); }
         e.target.value = '';
-=======
->>>>>>> 30bb02147ea73dbeeb14506130ce444d5228ef46
     };
     reader.readAsText(file);
   }
@@ -206,7 +199,6 @@ export default function Equipos() {
                     <button onClick={addPlayerManual} className={styles.quick_action}><PlusCircle size={20} /></button>
                 </div>
 
-<<<<<<< HEAD
                 <div style={{display:'flex', gap:'10px', marginBottom:'20px'}}>
                     <label className={styles.upload_label} style={{width:'100%', borderStyle:'dashed'}}>
                         <FileText size={18} /> Carga Inteligente (.TXT / CSV)
@@ -218,12 +210,6 @@ export default function Equipos() {
                         <input type="file" accept=".json" onChange={handleJsonPlayers} style={{display:'none'}} />
                     </label>
                 </div>
-=======
-                <label className={styles.upload_label} style={{marginBottom:'20px', width:'100%', borderStyle:'dashed'}}>
-                    <FileJson size={18} /> Cargar Plantel Completo (JSON)
-                    <input type="file" accept=".json" onChange={handleJsonPlayers} style={{display:'none'}} />
-                </label>
->>>>>>> 30bb02147ea73dbeeb14506130ce444d5228ef46
 
                 <div style={{display:'flex', flexDirection:'column', gap:'10px'}}>
                     {teamPlayers.map(p => (

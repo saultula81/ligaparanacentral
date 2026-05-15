@@ -61,10 +61,7 @@ export default function AdminLayout() {
             <span style={{marginRight: '10px'}}>🏠</span> Inicio / Guía
           </Link>
           <Link to="/admin/equipos" className={`${styles.admin__link} ${isActive('/admin/equipos')}`}>Equipos y Categorias</Link>
-<<<<<<< HEAD
-=======
-          <Link to="/admin/jugadores" className={`${styles.admin__link} ${isActive('/admin/jugadores')}`}>Jugadores</Link>
->>>>>>> 30bb02147ea73dbeeb14506130ce444d5228ef46
+
           <Link to="/admin/fixture" className={`${styles.admin__link} ${isActive('/admin/fixture')}`}>Generar Fixture</Link>
           <Link to="/admin/resultados" className={`${styles.admin__link} ${isActive('/admin/resultados')}`}>Carga de Resultados</Link>
           
